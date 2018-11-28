@@ -28,7 +28,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionTwo === null || questionTwo === '') {
   alert('YOU BROKE IT!');
-} else if (questionTwo !== undefined) {
+} else if (questionTwo !== 'y' && questionTwo !== 'n' && questionTwo !== 'yes' && questionTwo !== 'no') {
+  alert('You did not provide a valid response.');
+}
+
+if (questionTwo !== undefined) {
   questionTwo = questionTwo.toLowerCase();
 }
 
@@ -42,7 +46,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionThree === null || questionThree === '') {
   alert('YOU BROKE IT!');
-} else if (questionThree !== undefined) {
+} else if (questionThree !== 'y' && questionThree !== 'n' && questionThree !== 'yes' && questionThree !== 'no') {
+  alert('You did not provide a valid response.');
+}
+
+if (questionThree !== undefined) {
   questionThree = questionThree.toLowerCase();
 }
 
@@ -56,7 +64,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionFour === null || questionFour === '') {
   alert('YOU BROKE IT!');
-} else if (questionFour !== undefined) {
+} else if (questionFour !== 'y' && questionFour !== 'n' && questionFour !== 'yes' && questionFour !== 'no') {
+  alert('You did not provide a valid response.');
+}
+
+if (questionFour !== undefined) {
   questionFour = questionFour.toLowerCase();
 }
 
@@ -71,45 +83,13 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionFive === null || questionFive === '') {
   alert('YOU BROKE IT!');
-} else if (questionFive !== undefined) {
+} else if (questionFive !== 'y' && questionFive !== 'n' && questionFive !== 'yes' && questionFive !== 'no') {
+  alert('You did not provide a valid response.');
+}
+
+if (questionFive !== undefined) {
   questionFive = questionFive.toLowerCase();
 }
 
 console.log('Answer to Question 5: ', questionFive);
 
-
-
-
-
-// -------------------------
-
-//  EXTRA QUESTION (NOT Y/N)
-// var questionOne = prompt('What color are my shoes, ' + userName + '?');
-
-// if (questionOne !== null || '') {
-//   questionOne = questionOne.toLowerCase();
-//   alert('Way to submit an answer! If you thought you were going to receive immediate feedback, I have some bad news. You will have to wait until the end of this questionaire to see how you did.');
-// } else {
-//   questionOne = prompt('Now now, ' + userName + ', you have to make a guess. What color are my shoes?');
-//   questionOne = questionOne.toLowerCase();
-// }
-
-// if (questionOne === null || '') {
-//   questionOne = prompt('Seriously, ' + userName + ', you have to make a guess! Just write down a color.');
-//   questionOne = questionOne.toLowerCase();
-// }
-
-// if (questionOne === null || '') {
-//   alert('Alright...you\'re done. Thanks for nothing.');
-// }
-
-// if (questionOne === 'blue') {
-//   var answerOne = 'correct';
-// }
-
-// console.log(userName + '\'s answer to Question 1: ' + questionOne);
-// console.log(userName + '\'s answer to Question 1 is ' + answerOne + '.');
-
-// ---------------------------
-
-// QUESTION 1
