@@ -33,6 +33,10 @@ if (questionTwo === null || questionTwo === '') {
 } else if (questionTwo !== 'y' && questionTwo !== 'n' && questionTwo !== 'yes' && questionTwo !== 'no') {
   alert('You did not provide a valid response.');
   console.log(userName + ' did not provide a valid response to Question 2');
+} else if (questionTwo === 'n' || questionTwo === 'no') {
+  alert('You are correct!')
+} else {
+  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
 
 if (questionTwo !== undefined) {
