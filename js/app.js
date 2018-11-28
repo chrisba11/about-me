@@ -1,5 +1,7 @@
 'use strict';
 
+// Question 1
+
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
 
 if (doYouWantToPlay === null || doYouWantToPlay === '') {
@@ -30,6 +32,7 @@ if (questionTwo === null || questionTwo === '') {
   alert('YOU BROKE IT!');
 } else if (questionTwo !== 'y' && questionTwo !== 'n' && questionTwo !== 'yes' && questionTwo !== 'no') {
   alert('You did not provide a valid response.');
+  console.log(userName + ' did not provide a valid response to Question 2');
 }
 
 if (questionTwo !== undefined) {
@@ -48,6 +51,7 @@ if (questionThree === null || questionThree === '') {
   alert('YOU BROKE IT!');
 } else if (questionThree !== 'y' && questionThree !== 'n' && questionThree !== 'yes' && questionThree !== 'no') {
   alert('You did not provide a valid response.');
+  console.log(userName + ' did not provide a valid response to Question 3');
 }
 
 if (questionThree !== undefined) {
@@ -66,6 +70,7 @@ if (questionFour === null || questionFour === '') {
   alert('YOU BROKE IT!');
 } else if (questionFour !== 'y' && questionFour !== 'n' && questionFour !== 'yes' && questionFour !== 'no') {
   alert('You did not provide a valid response.');
+  console.log(userName + ' did not provide a valid response to Question 4');
 }
 
 if (questionFour !== undefined) {
@@ -85,6 +90,7 @@ if (questionFive === null || questionFive === '') {
   alert('YOU BROKE IT!');
 } else if (questionFive !== 'y' && questionFive !== 'n' && questionFive !== 'yes' && questionFive !== 'no') {
   alert('You did not provide a valid response.');
+  console.log(userName + ' did not provide a valid response to Question 5');
 }
 
 if (questionFive !== undefined) {
