@@ -8,12 +8,12 @@ if (doYouWantToPlay === null || doYouWantToPlay === '') {
   doYouWantToPlay = doYouWantToPlay.toLowerCase();
 }
 
-console.log('Anwer to Question 1: ', doYouWantToPlay);
+console.log('Answer to Question 1: ', doYouWantToPlay);
 
 if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var userName = prompt('Great! Thanks for agreeing to play! What would you like me to call you?');
 } else {
-  alert('FINE! I DIDN\'t WANT TO PLAY WITH YOU EITHER!!!');
+  alert('FINE! I DIDN\'T WANT TO PLAY WITH YOU EITHER!!!');
 }
 
 // Question 2
@@ -28,7 +28,7 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionTwo === null || questionTwo === '') {
   alert('YOU BROKE IT!');
-} else {
+} else if (questionTwo !== undefined) {
   questionTwo = questionTwo.toLowerCase();
 }
 
@@ -42,11 +42,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionThree === null || questionThree === '') {
   alert('YOU BROKE IT!');
-} else {
+} else if (questionThree !== undefined) {
   questionThree = questionThree.toLowerCase();
 }
 
-console.log('Answer to Question 2: ', questionThree);
+console.log('Answer to Question 3: ', questionThree);
 
 // Question 4
 
@@ -56,11 +56,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionFour === null || questionFour === '') {
   alert('YOU BROKE IT!');
-} else {
+} else if (questionFour !== undefined) {
   questionFour = questionFour.toLowerCase();
 }
 
-console.log('Answer to Question 2: ', questionFour);
+console.log('Answer to Question 4: ', questionFour);
 
 
 // Question 5
@@ -71,11 +71,11 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 
 if (questionFive === null || questionFive === '') {
   alert('YOU BROKE IT!');
-} else {
+} else if (questionFive !== undefined) {
   questionFive = questionFive.toLowerCase();
 }
 
-console.log('Answer to Question 2: ', questionFive);
+console.log('Answer to Question 5: ', questionFive);
 
 
 
