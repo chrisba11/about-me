@@ -1,22 +1,50 @@
 'use strict';
 
-// Question 1
+// Welcome
 
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
 
-if (doYouWantToPlay === null || doYouWantToPlay === '') {
+if (doYouWantToPlay === null) {
   alert('YOU BROKE IT!');
 } else {
   doYouWantToPlay = doYouWantToPlay.toLowerCase();
 }
 
-console.log('Answer to Question 1: ', doYouWantToPlay);
+console.log('Answer to Welcome Question: ', doYouWantToPlay);
 
 if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var userName = prompt('Great! Thanks for agreeing to play! What would you like me to call you?');
 } else {
   alert('FINE! I DIDN\'T WANT TO PLAY WITH YOU EITHER!!!');
 }
+
+// Question 1
+
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
+}
+
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var questionOne = prompt('Was I born in the United States?');
+}
+
+if (questionOne === null) {
+  alert('YOU BROKE IT!');
+} else if (questionOne !== 'y' && questionOne !== 'n' && questionOne !== 'yes' && questionOne !== 'no') {
+  alert('You did not provide a valid response.');
+  console.log(userName + ' did not provide a valid response to Question 1');
+} else if (questionOne === 'n' || questionOne === 'no') {
+  alert('You are correct!');
+} else {
+  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
+}
+
+if (questionTwo !== undefined) {
+  questionTwo = questionTwo.toLowerCase();
+}
+
+console.log('Answer to Question 2: ', questionTwo);
+
 
 // Question 2
 
@@ -28,7 +56,7 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionTwo = prompt('Was I born in the United States?');
 }
 
-if (questionTwo === null || questionTwo === '') {
+if (questionTwo === null) {
   alert('YOU BROKE IT!');
 } else if (questionTwo !== 'y' && questionTwo !== 'n' && questionTwo !== 'yes' && questionTwo !== 'no') {
   alert('You did not provide a valid response.');
@@ -51,7 +79,7 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionThree = prompt('Do I have any pets?');
 }
 
-if (questionThree === null || questionThree === '') {
+if (questionThree === null) {
   alert('YOU BROKE IT!');
 } else if (questionThree !== 'y' && questionThree !== 'n' && questionThree !== 'yes' && questionThree !== 'no') {
   alert('You did not provide a valid response.');
@@ -74,7 +102,7 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionFour = prompt('Is my favorite animal a giraffe?');
 }
 
-if (questionFour === null || questionFour === '') {
+if (questionFour === null) {
   alert('YOU BROKE IT!');
 } else if (questionFour !== 'y' && questionFour !== 'n' && questionFour !== 'yes' && questionFour !== 'no') {
   alert('You did not provide a valid response.');
@@ -98,7 +126,7 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionFive = prompt('Can I play bohemian rhapsody on the ukulele?');
 }
 
-if (questionFive === null || questionFive === '') {
+if (questionFive === null) {
   alert('YOU BROKE IT!');
 } else if (questionFive !== 'y' && questionFive !== 'n' && questionFive !== 'yes' && questionFive !== 'no') {
   alert('You did not provide a valid response.');
@@ -115,3 +143,7 @@ if (questionFive !== undefined) {
 
 console.log('Answer to Question 5: ', questionFive);
 
+
+// // Question 6
+
+// if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
