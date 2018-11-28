@@ -34,7 +34,7 @@ if (questionTwo === null || questionTwo === '') {
   alert('You did not provide a valid response.');
   console.log(userName + ' did not provide a valid response to Question 2');
 } else if (questionTwo === 'n' || questionTwo === 'no') {
-  alert('You are correct!')
+  alert('You are correct!');
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -56,6 +56,10 @@ if (questionThree === null || questionThree === '') {
 } else if (questionThree !== 'y' && questionThree !== 'n' && questionThree !== 'yes' && questionThree !== 'no') {
   alert('You did not provide a valid response.');
   console.log(userName + ' did not provide a valid response to Question 3');
+} else if (questionThree === 'y' || questionThree === 'yes') {
+  alert('You are correct!');
+} else {
+  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
 
 if (questionThree !== undefined) {
@@ -75,6 +79,10 @@ if (questionFour === null || questionFour === '') {
 } else if (questionFour !== 'y' && questionFour !== 'n' && questionFour !== 'yes' && questionFour !== 'no') {
   alert('You did not provide a valid response.');
   console.log(userName + ' did not provide a valid response to Question 4');
+} else if (questionFour === 'n' || questionFour === 'no') {
+  alert('You are correct!');
+} else {
+  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
 
 if (questionFour !== undefined) {
@@ -95,6 +103,10 @@ if (questionFive === null || questionFive === '') {
 } else if (questionFive !== 'y' && questionFive !== 'n' && questionFive !== 'yes' && questionFive !== 'no') {
   alert('You did not provide a valid response.');
   console.log(userName + ' did not provide a valid response to Question 5');
+} else if (questionFive === 'n' || questionFive === 'no') {
+  alert('You are correct!');
+} else {
+  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
 
 if (questionFive !== undefined) {
