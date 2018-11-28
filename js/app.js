@@ -14,10 +14,8 @@ if (doYouWantToPlay === 'y' || 'yes') {
   var areYouSure = confirm('Are you sure you\'re ready, though?');
   if (areYouSure === null || '') {
     alert('YOU BROKE IT!');
-  } else if (areYouSure === true) {
-    console.log(userName + ' is sure.');
   } else {
-    console.log(userName + 'is not sure.');
+    areYouSure = areYouSure.toLowerCase();
   }
 } else if (doYouWantToPlay !== 'n' || 'no' || 'y' || 'yes') {
   var didntCatchThat = prompt('I\'m sorry, I didn\'t quite get that. Please respond with Y for yes or N for no.');
