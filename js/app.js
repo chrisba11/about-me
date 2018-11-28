@@ -2,45 +2,84 @@
 
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
 
-if (doYouWantToPlay === null || '') {
+if (doYouWantToPlay === null || doYouWantToPlay === '') {
   alert('YOU BROKE IT!');
 } else {
   doYouWantToPlay = doYouWantToPlay.toLowerCase();
 }
 
-console.log('var doYouWantToPlay: ', doYouWantToPlay);
+console.log('Anwer to Question 1: ', doYouWantToPlay);
 
-if (doYouWantToPlay === 'y' || 'yes') {
-  var areYouSure = confirm('Are you sure you\'re ready, though?');
-  if (areYouSure === null || '') {
-    alert('YOU BROKE IT!');
-  } else {
-    areYouSure = areYouSure.toLowerCase();
-  }
-} else if (doYouWantToPlay !== 'n' || 'no' || 'y' || 'yes') {
-  var didntCatchThat = prompt('I\'m sorry, I didn\'t quite get that. Please respond with Y for yes or N for no.');
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var userName = prompt('Great! Thanks for agreeing to play! What would you like me to call you?');
 } else {
-  alert('FINE! SEE IF I CARE!!! UGH!');
+  alert('FINE! I DIDN\'t WANT TO PLAY WITH YOU EITHER!!!');
 }
 
-console.log(didntCatchThat);
+// Question 2
 
-if (didntCatchThat === 'n' ) {
-  alert('FINE! SEE IF I CARE!!!');
-} else if (didntCatchThat === undefined) {
-  console.log('didntCatchThat = UNDEFINED');
-} else {
-  alert('You\'re hopeless. Try again later.');
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
 }
 
-if (areYouSure === 'y' || 'yes') {
-  var userName = prompt('What would you like me to call you?');
-  console.log('The player would like to be called ' + userName);
-} else {
-  alert('FINE! SEE IF I CARE!!! UGH!');
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var questionTwo = prompt('Was I born in the United States?');
 }
 
-alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
+if (questionTwo === null || questionTwo === '') {
+  alert('YOU BROKE IT!');
+} else {
+  questionTwo = questionTwo.toLowerCase();
+}
+
+console.log('Answer to Question 2: ', questionTwo);
+
+// Question 3
+
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var questionThree = prompt('Do I have any pets?');
+}
+
+if (questionThree === null || questionThree === '') {
+  alert('YOU BROKE IT!');
+} else {
+  questionThree = questionThree.toLowerCase();
+}
+
+console.log('Answer to Question 2: ', questionThree);
+
+// Question 4
+
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var questionFour = prompt('Is my favorite animal a giraffe?');
+}
+
+if (questionFour === null || questionFour === '') {
+  alert('YOU BROKE IT!');
+} else {
+  questionFour = questionFour.toLowerCase();
+}
+
+console.log('Answer to Question 2: ', questionFour);
+
+
+// Question 5
+
+if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+  var questionFive = prompt('Can I play bohemian rhapsody on the ukulele?');
+}
+
+if (questionFive === null || questionFive === '') {
+  alert('YOU BROKE IT!');
+} else {
+  questionFive = questionFive.toLowerCase();
+}
+
+console.log('Answer to Question 2: ', questionFive);
+
+
+
+
 
 // -------------------------
 
