@@ -1,17 +1,45 @@
 * {
-  background-color: bisque;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  text-align: center;
+}
+
+strong {
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 48px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 60px;
   padding: 12px;
   background-color: black;
   text-align: center;
-  vertical-align: middle;
-  color: rgb(255, 208, 0);
+  color: rgb(255, 196, 0);
 }
 
 img {
   border-radius: 5px;
-  width: 50px;
+  width: 80px;
+}
+
+img#L {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+h2, h3, h4 {
+  color: white; 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 25px 2px;
+
+}
+
+li {
+
 }
