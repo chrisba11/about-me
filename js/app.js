@@ -30,6 +30,9 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
 }
 
+// Number Questions Answered Correctly
+var numberCorrect = 0;
+
 // Question 1
 
 if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
@@ -43,6 +46,7 @@ if (questionOne === null) {
   console.log(userName + ' did not provide a valid response to Question 1');
 } else if (questionOne === 'y' || questionOne === 'yes') {
   alert('You are correct!');
+  numberCorrect++;
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -67,6 +71,7 @@ if (questionTwo === null) {
   console.log(userName + ' did not provide a valid response to Question 2');
 } else if (questionTwo === 'n' || questionTwo === 'no') {
   alert('You are correct!');
+  numberCorrect++;
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -90,6 +95,7 @@ if (questionThree === null) {
   console.log(userName + ' did not provide a valid response to Question 3');
 } else if (questionThree === 'y' || questionThree === 'yes') {
   alert('You are correct!');
+  numberCorrect++;
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -113,6 +119,7 @@ if (questionFour === null) {
   console.log(userName + ' did not provide a valid response to Question 4');
 } else if (questionFour === 'n' || questionFour === 'no') {
   alert('You are correct!');
+  numberCorrect++;
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -137,6 +144,7 @@ if (questionFive === null) {
   console.log(userName + ' did not provide a valid response to Question 5');
 } else if (questionFive === 'n' || questionFive === 'no') {
   alert('You are correct!');
+  numberCorrect++;
 } else {
   alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
 }
@@ -159,6 +167,7 @@ var guessesRemaining = 4;
 while (guessesRemaining > 0) {
   if (questionSix === 6) {
     alert('You are correct!');
+    numberCorrect++;
     break;
   } else if (questionSix < 6) {
     guessesRemaining--;
@@ -195,6 +204,7 @@ while (guessesRemainingTwo > 0) {
   for (i = 0; i < myCountriesVisited.length; i++) {
     if (myCountriesVisited[i] === countryGuess) {
       alert('You are correct! Nicely done!');
+      numberCorrect++;
       console.log(userName + ' has guessed a country I visited!');
       guessesRemainingTwo = -1;
       break;
@@ -209,3 +219,5 @@ while (guessesRemainingTwo > 0) {
     console.log(userName + ' was not able to guess any of my countries.');
   }
 }
+
+alert('You got ' + numberCorrect + ' answers correct!');
