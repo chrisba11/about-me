@@ -154,13 +154,6 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
 }
 
-// if (questionSix === null || questionSix === '') {
-//   alert('YOU SHOULD HAVE ENTERED AN INTEGER! GAME OVER!');
-//   console.log('GAME OVER');
-// } else {
-//   parseInt(questionSix);
-// }
-
 var guessesRemaining = 4;
 
 while (guessesRemaining > 0) {
@@ -193,24 +186,26 @@ for (var i = 0; i < myCountriesVisited.length; i++) {
   console.log('I have visited ' + myCountriesVisited[i]);
 }
 
-guessesRemaining = 6;
-var countryGuess = prompt('Can you guess a country that I have visited?');
+var guessesRemainingTwo = 6;
 
-while (guessesRemaining > 0) {
+while (guessesRemainingTwo > 0) {
+  var countryGuess = prompt('Can you guess a country that I have visited?').toLowerCase();
+  guessesRemainingTwo--;
+
   for (i = 0; i < myCountriesVisited.length; i++) {
     if (myCountriesVisited[i] === countryGuess) {
       alert('You are correct! Nicely done!');
       console.log(userName + ' has guessed a country I visited!');
-      guessesRemaining = 0;
+      guessesRemainingTwo = -1;
       break;
-    } else if (guessesRemaining > 1) {
-      guessesRemaining--;
-      alert('Sorry, not in the list. You have ' + guessesRemaining + ' guesses left.');
-      countryGuess = prompt('Let\'s try again. Guess a country you think I might have visited.');
-    } else {
-      alert('Sorry...you have exhausted your guesses. You must not know me as well as you thought.');
-      console.log(userName + ' was not able to guess any of my countries.');
-      guessesRemaining = 0;
     }
+  }
+  if (guessesRemainingTwo > 1) {
+    alert('Sorry, not in the list. You have ' + guessesRemainingTwo + ' guesses left.');
+    console.log(userName + ' guessed incorrectly.');
+  }
+  if (guessesRemainingTwo === 0) {
+    alert('Sorry...you have exhausted your guesses. You must not know me as well as you thought.');
+    console.log(userName + ' was not able to guess any of my countries.');
   }
 }
