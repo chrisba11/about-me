@@ -154,18 +154,32 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
   var questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
 }
 
-while (questionSix !== 6) {
-  if (questionSix < 6) {
-    alert('Sorry...aim higher.');
-    questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
-  } else if (questionSix > 6) {
-    alert('Sorry...aim lower.');
-    questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
+var guessesRemaining = 4;
+
+while (guessesRemaining > 0) {
+  if (questionSix === null || questionSix === '') {
+    alert('YOU BROKE IT!');
+  } else if (questionSix === 6) {
+    alert('You are correct!');
+  } else if (questionSix !== 6) {
+    while (questionSix !== 6) {
+      if (questionSix < 6) {
+        guessesRemaining--;
+        alert('Sorry...aim higher. You have ' + guessesRemaining + ' guesses left.');
+        questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
+      } else if (questionSix > 6) {
+        guessesRemaining--;
+        alert('Sorry...aim lower. You have ' + guessesRemaining + ' guesses left.');
+        questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
+      }
+    }
   }
 }
 
-if (questionSix === null) {
-  alert('YOU BROKE IT!');
-} else if (questionSix === 6) {
-  alert('You are correct!');
-}
+
+
+// if (questionSix === null) {
+//   alert('YOU BROKE IT!');
+// } else if (questionSix === 6) {
+//   alert('You are correct!');
+// }
