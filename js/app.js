@@ -157,29 +157,48 @@ if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
 var guessesRemaining = 4;
 
 while (guessesRemaining > 0) {
-  if (questionSix === null || questionSix === '') {
-    alert('YOU BROKE IT!');
-  } else if (questionSix === 6) {
+  if (questionSix === 6) {
     alert('You are correct!');
-  } else if (questionSix !== 6) {
-    while (questionSix !== 6) {
-      if (questionSix < 6) {
-        guessesRemaining--;
-        alert('Sorry...aim higher. You have ' + guessesRemaining + ' guesses left.');
-        questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
-      } else if (questionSix > 6) {
-        guessesRemaining--;
-        alert('Sorry...aim lower. You have ' + guessesRemaining + ' guesses left.');
-        questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
-      }
+    break;
+  } else if (questionSix < 6) {
+    guessesRemaining--;
+    alert('Sorry...aim higher. You have ' + guessesRemaining + ' guesses left.');
+    if(guessesRemaining > 0) {
+      questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
+    } else {
+      break;
+    }
+  } else if (questionSix > 6) {
+    guessesRemaining--;
+    alert('Sorry...aim lower. You have ' + guessesRemaining + ' guesses left.');
+    if (guessesRemaining > 0) {
+      questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
+    } else {
+      break;
     }
   }
 }
 
 
+var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'the netherlands'];
 
-// if (questionSix === null) {
-//   alert('YOU BROKE IT!');
-// } else if (questionSix === 6) {
-//   alert('You are correct!');
-// }
+for (var i = 0; i < myCountriesVisited.length; i++) {
+  console.log('I have visited ' + myCountriesVisited[i]);
+}
+
+guessesRemaining = 6;
+var countryGuess = prompt('Can you guess a country that I have visited?');
+
+while (guessesRemaining > 0) {
+  for (i = 0; i < myCountriesVisited.length; i++) {
+    if (myCountriesVisited[i] === countryGuess) {
+      alert('You are correct!');
+      break;
+    } else {
+      guessesRemaining--;
+      alert('Sorry, not in the list. You have ' + guessesRemaining + ' guesses left.');
+      countryGuess = prompt('Let\'s try again. Guess a country you think I might have visited.');
+    }
+  }
+}
+
