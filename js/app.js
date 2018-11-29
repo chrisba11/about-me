@@ -220,4 +220,14 @@ while (guessesRemainingTwo > 0) {
   }
 }
 
-alert('You got ' + numberCorrect + ' answers correct!');
+if(numberCorrect === 0) {
+  alert('Sorry ' + userName + ', you really don\'t know me at all!');
+} else if (numberCorrect > 0 && numberCorrect < 4) {
+  alert(userName + ', you got ' + numberCorrect + '/7 answers correct. Not terrible, but not good.');
+} else if (numberCorrect > 3 && numberCorrect < 6) {
+  alert(userName + ', you got ' + numberCorrect + '/7 answers correct. Not bad, but not great.');
+} else if (numberCorrect > 5 && numberCorrect < 7) {
+  alert('You got ' + numberCorrect + '/7 answers correct! That\'s pretty darn great!.');
+} else {
+  alert(userName + ' is a genius! PERFECT SCORE!!!');
+}
