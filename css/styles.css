@@ -8,6 +8,10 @@ strong {
   font-weight: bold;
 }
 
+em {
+  font-style: italic;
+}
+
 h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 60px;
@@ -32,7 +36,7 @@ img#L {
 }
 
 h2, h3, h4 {
-  color: white; 
+  color: rgb(248, 208, 97); 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 24px;
   text-align: center;
@@ -40,6 +44,36 @@ h2, h3, h4 {
 
 }
 
-li {
+ul > li {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
+ul > li > ul > li {
+  color: rgb(161, 143, 129);
+  font-size: 15px;
+  margin: 4px;
+}
+
+div > ul > li {
+  color: rgb(124, 182, 184);
+  font-size: 18px;
+  margin: 4px;
+}
+
+div {
+  margin-bottom: 35px;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  list-style-type: decimal-leading-zero;
+}
+
+ol > li {
+  list-style-type: decimal-leading-zero;
+}
+
+body {
+  margin-bottom: 35px;
 }
