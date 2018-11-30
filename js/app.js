@@ -3,54 +3,68 @@
 // Welcome
 
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
-
-if (doYouWantToPlay === null) {
-  alert('YOU BROKE IT!');
-} else if (doYouWantToPlay === 'n' || doYouWantToPlay === 'no') {
-  alert('FINE! I DIDN\'T WANT TO PLAY WITH YOU EITHER!!!');
-} else {
-  while (doYouWantToPlay !== 'y' && doYouWantToPlay !== 'n' && doYouWantToPlay !== 'yes' && doYouWantToPlay !== 'no') {
-    doYouWantToPlay = prompt('I\'m very sensitive, so please respond with Y or N, or I might not understand you. Do you want to play a game?');
+doYouWantToPlay = doYouWantToPlay.toLowerCase();
+//Tara: you may want to lowercase that
+function wantPlay () {
+  if (doYouWantToPlay === null) {
+    alert('YOU BROKE IT!');
+  } else if (doYouWantToPlay === 'n' || doYouWantToPlay === 'no') {
+    alert('FINE! I DIDN\'T WANT TO PLAY WITH YOU EITHER!!!');
+  } else {
+    while (doYouWantToPlay !== 'y' && doYouWantToPlay !== 'n' && doYouWantToPlay !== 'yes' && doYouWantToPlay !== 'no') {
+      doYouWantToPlay = prompt('I\'m very sensitive, so please respond with Y or N, or I might not understand you. Do you want to play a game?');
+    }
+    doYouWantToPlay = doYouWantToPlay.toLowerCase();
   }
-  doYouWantToPlay = doYouWantToPlay.toLowerCase();
 }
-
+wantPlay();
 console.log('Answer to Welcome Question: ', doYouWantToPlay);
 
-if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
-  var userName = prompt('Great! Thanks for playing! What would you like me to call you?');
-} else if (questionOne !== 'y' && questionOne !== 'n' && questionOne !== 'yes' && questionOne !== 'no') {
-  alert('You did not provide a valid response.');
-  console.log(userName + ' did not provide a valid response to Welcome Question');
+var userName;
+function callYou() {
+  if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+    userName = prompt('Great! Thanks for playing! What would you like me to call you?');
+  } else if (questionOne !== 'y' && questionOne !== 'n' && questionOne !== 'yes' && questionOne !== 'no') {
+    alert('You did not provide a valid response.');
+    console.log(userName + ' did not provide a valid response to Welcome Question');
+  }
 }
-
-// UserName
-
-if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
-  alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
+callYou();
+// UserName 
+function welcome() {
+  if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+    alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
+  }
 }
+welcome();
 
 // Number Questions Answered Correctly
 var numberCorrect = 0;
 
 // Question 1
+var questionOne;
 
-if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
-  var questionOne = prompt('Let\'s start with an easy one. Am I learning to code?');
+function firstQuestion() {
+  if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
+    questionOne = prompt('Let\'s start with an easy one. Am I learning to code?');
+  }
 }
+firstQuestion();
 
-if (questionOne === null) {
-  alert('YOU BROKE IT!');
-} else if (questionOne !== 'y' && questionOne !== 'n' && questionOne !== 'yes' && questionOne !== 'no') {
-  alert('You did not provide a valid response.');
-  console.log(userName + ' did not provide a valid response to Question 1');
-} else if (questionOne === 'y' || questionOne === 'yes') {
-  alert('You are correct!');
-  numberCorrect++;
-} else {
-  alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
+function firstQuestionResponse() {
+  if (questionOne === null) {
+    alert('YOU BROKE IT!');
+  } else if (questionOne !== 'y' && questionOne !== 'n' && questionOne !== 'yes' && questionOne !== 'no') {
+    alert('You did not provide a valid response.');
+    console.log(userName + ' did not provide a valid response to Question 1');
+  } else if (questionOne === 'y' || questionOne === 'yes') {
+    alert('You are correct!');
+    numberCorrect++;
+  } else {
+    alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
+  }
 }
-
+firstQuestionResponse();
 if (questionTwo !== undefined) {
   questionTwo = questionTwo.toLowerCase();
 }
