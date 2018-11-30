@@ -3,6 +3,19 @@
 // Welcome: Do you want to play a game?
 
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
+var userName;
+var numberCorrect = 0;
+var questionOne;
+var questionTwo;
+var questionThree;
+var questionFour;
+var questionFive;
+var questionSix;
+var guessesRemaining = 4;
+var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'netherlands', 'egypt', 'jordan'];
+var guessesRemainingTwo = 6;
+var countryGuess;
+
 doYouWantToPlay = doYouWantToPlay.toLowerCase();
 
 function wantPlay () {
@@ -15,15 +28,12 @@ function wantPlay () {
       doYouWantToPlay = prompt('I\'m very sensitive, so please respond with Y or N, or I might not understand you. Do you want to play a game?');
     }
     doYouWantToPlay = doYouWantToPlay.toLowerCase();
+    console.log('Answer to Welcome Question: ', doYouWantToPlay);
   }
 }
 
-wantPlay();
-console.log('Answer to Welcome Question: ', doYouWantToPlay);
-
 // UserName: What would you like me to call you?
 
-var userName;
 function callYou() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     userName = prompt('Great! Thanks for playing! What would you like me to call you?');
@@ -33,29 +43,19 @@ function callYou() {
   }
 }
 
-callYou();
-
 function welcome() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
   }
 }
 
-welcome();
-
-// Number Questions Answered Correctly
-var numberCorrect = 0;
-
 // Question 1: Am I leaning to code?
-var questionOne;
 
 function firstQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionOne = prompt('Let\'s start with an easy one. Am I learning to code?');
   }
 }
-
-firstQuestion();
 
 function firstQuestionResponse() {
   if (questionOne === null) {
@@ -71,8 +71,6 @@ function firstQuestionResponse() {
   }
 }
 
-firstQuestionResponse();
-
 function questionOneLowercase() {
   if (questionOne !== undefined) {
     questionOne = questionOne.toLowerCase();
@@ -80,18 +78,13 @@ function questionOneLowercase() {
   }
 }
 
-questionOneLowercase();
-
 // Question 2: Was I born in the U.S.?
 
-var questionTwo;
 function secondQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionTwo = prompt('Was I born in the United States?');
   }
 }
-
-secondQuestion();
 
 function secondQuestionResponse() {
   if (questionTwo === null) {
@@ -107,8 +100,6 @@ function secondQuestionResponse() {
   }
 }
 
-secondQuestionResponse();
-
 function questionTwoLowercase() {
   if (questionTwo !== undefined) {
     questionTwo = questionTwo.toLowerCase();
@@ -116,19 +107,13 @@ function questionTwoLowercase() {
   }
 }
 
-questionTwoLowercase();
-
-
 // Question 3: Do I have any pets?
 
-var questionThree;
 function thirdQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionThree = prompt('Do I have any pets?');
   }
 }
-
-thirdQuestion();
 
 function thirdQuestionResponse() {
   if (questionThree === null) {
@@ -144,8 +129,6 @@ function thirdQuestionResponse() {
   }
 }
 
-thirdQuestionResponse();
-
 function questionThreeLowercase() {
   if (questionThree !== undefined) {
     questionThree = questionThree.toLowerCase();
@@ -153,18 +136,13 @@ function questionThreeLowercase() {
   }
 }
 
-questionThreeLowercase();
-
 // Question 4: Is my favorite animal a giraffe?
 
-var questionFour;
 function fourthQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionFour = prompt('Is my favorite animal a giraffe?');
   }
 }
-
-fourthQuestion();
 
 function fourthQuestionResponse() {
   if (questionFour === null) {
@@ -180,8 +158,6 @@ function fourthQuestionResponse() {
   }
 }
 
-fourthQuestionResponse();
-
 function questionFourLowercase() {
   if (questionFour !== undefined) {
     questionFour = questionFour.toLowerCase();
@@ -189,18 +165,13 @@ function questionFourLowercase() {
   }
 }
 
-questionFourLowercase();
-
 // Question 5: Can I play Bohemian Rhapsody on the ukulele?
 
-var questionFive;
 function fifthQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionFive = prompt('Can I play bohemian rhapsody on the ukulele?');
   }
 }
-
-fifthQuestion();
 
 function fifthQuestionResponse() {
   if (questionFive === null) {
@@ -216,8 +187,6 @@ function fifthQuestionResponse() {
   }
 }
 
-fifthQuestionResponse();
-
 function questionFiveLowercase() {
   if (questionFive !== undefined) {
     questionFive = questionFive.toLowerCase();
@@ -225,20 +194,13 @@ function questionFiveLowercase() {
   }
 }
 
-questionFiveLowercase();
-
 // Question 6: How many schools have I attended since high school?
 
-var questionSix;
 function sixthQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
   }
 }
-
-sixthQuestion();
-
-var guessesRemaining = 4;
 
 function sixthQuestionResponse() {
   while (guessesRemaining > 0) {
@@ -266,21 +228,13 @@ function sixthQuestionResponse() {
   }
 }
 
-sixthQuestionResponse();
-
 //Question 7: Can you guess a country I have visited?
-
-var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'netherlands', 'egypt', 'jordan'];
 
 function seventhQuestion() {
   for (var i = 0; i < myCountriesVisited.length; i++) {
     console.log('I have visited ' + myCountriesVisited[i]);
   }
 }
-seventhQuestion();
-
-var guessesRemainingTwo = 6;
-var countryGuess;
 
 function seventhQuestionResponse() {
   while (guessesRemainingTwo > 0) {
@@ -307,8 +261,6 @@ function seventhQuestionResponse() {
   }
 }
 
-seventhQuestionResponse();
-
 function numberCorrectResponse() {
   if(numberCorrect === 0) {
     alert('Sorry ' + userName + ', you really don\'t know me at all!');
@@ -327,5 +279,50 @@ function numberCorrectResponse() {
     console.log(userName + ' is a genius! PERFECT SCORE!!!');
   }
 }
+
+
+wantPlay();
+
+callYou();
+
+welcome();
+
+firstQuestion();
+
+firstQuestionResponse();
+
+questionOneLowercase();
+
+secondQuestion();
+
+secondQuestionResponse();
+
+questionTwoLowercase();
+
+thirdQuestion();
+
+thirdQuestionResponse();
+
+questionThreeLowercase();
+
+fourthQuestion();
+
+fourthQuestionResponse();
+
+questionFourLowercase();
+
+fifthQuestion();
+
+fifthQuestionResponse();
+
+questionFiveLowercase();
+
+sixthQuestion();
+
+sixthQuestionResponse();
+
+seventhQuestion();
+
+seventhQuestionResponse();
 
 numberCorrectResponse();
