@@ -247,7 +247,7 @@ sixthQuestionResponse();
 
 //Question 7
 
-var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'the netherlands'];
+var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'netherlands', 'egypt', 'jordan'];
 
 function seventhQuestion() {
   for (var i = 0; i < myCountriesVisited.length; i++) {
