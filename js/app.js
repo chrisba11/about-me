@@ -1,10 +1,10 @@
 'use strict';
 
-// Welcome
+// Welcome: Do you want to play a game?
 
 var doYouWantToPlay = prompt('Welcome to the Fun Zone! Do you want to play a game? (I\'m very sensitive, so please respond with Y or N, or I might not understand you.)');
 doYouWantToPlay = doYouWantToPlay.toLowerCase();
-//Tara: you may want to lowercase that
+
 function wantPlay () {
   if (doYouWantToPlay === null) {
     alert('YOU BROKE IT!');
@@ -17,8 +17,11 @@ function wantPlay () {
     doYouWantToPlay = doYouWantToPlay.toLowerCase();
   }
 }
+
 wantPlay();
 console.log('Answer to Welcome Question: ', doYouWantToPlay);
+
+// UserName: What would you like me to call you?
 
 var userName;
 function callYou() {
@@ -29,19 +32,21 @@ function callYou() {
     console.log(userName + ' did not provide a valid response to Welcome Question');
   }
 }
+
 callYou();
-// UserName
+
 function welcome() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     alert('Welcome ' + userName + '! It is a pleasure to meet you. Now, let\'s see if you know me.');
   }
 }
+
 welcome();
 
 // Number Questions Answered Correctly
 var numberCorrect = 0;
 
-// Question 1
+// Question 1: Am I leaning to code?
 var questionOne;
 
 function firstQuestion() {
@@ -49,6 +54,7 @@ function firstQuestion() {
     questionOne = prompt('Let\'s start with an easy one. Am I learning to code?');
   }
 }
+
 firstQuestion();
 
 function firstQuestionResponse() {
@@ -64,6 +70,7 @@ function firstQuestionResponse() {
     alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
   }
 }
+
 firstQuestionResponse();
 
 function questionOneLowercase() {
@@ -72,15 +79,18 @@ function questionOneLowercase() {
     console.log('Answer to Question 1: ', questionOne);
   }
 }
+
 questionOneLowercase();
 
-// Question 2
+// Question 2: Was I born in the U.S.?
+
 var questionTwo;
 function secondQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionTwo = prompt('Was I born in the United States?');
   }
 }
+
 secondQuestion();
 
 function secondQuestionResponse() {
@@ -96,6 +106,7 @@ function secondQuestionResponse() {
     alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
   }
 }
+
 secondQuestionResponse();
 
 function questionTwoLowercase() {
@@ -104,16 +115,22 @@ function questionTwoLowercase() {
     console.log('Answer to Question 2: ', questionTwo);
   }
 }
+
 questionTwoLowercase();
 
 
-// Question 3
+// Question 3: Do I have any pets?
+
 var questionThree;
 function thirdQuestion() {
   if (doYouWantToPlay === 'y' || doYouWantToPlay === 'yes') {
     questionThree = prompt('Do I have any pets?');
   }
+}
 
+thirdQuestion();
+
+function thirdQuestionResponse() {
   if (questionThree === null) {
     alert('YOU BROKE IT!');
   } else if (questionThree !== 'y' && questionThree !== 'n' && questionThree !== 'yes' && questionThree !== 'no') {
@@ -127,6 +144,8 @@ function thirdQuestion() {
   }
 }
 
+thirdQuestionResponse();
+
 function questionThreeLowercase() {
   if (questionThree !== undefined) {
     questionThree = questionThree.toLowerCase();
@@ -134,11 +153,9 @@ function questionThreeLowercase() {
   }
 }
 
-thirdQuestion();
 questionThreeLowercase();
 
-
-// Question 4
+// Question 4: Is my favorite animal a giraffe?
 
 var questionFour;
 function fourthQuestion() {
@@ -146,7 +163,9 @@ function fourthQuestion() {
     questionFour = prompt('Is my favorite animal a giraffe?');
   }
 }
+
 fourthQuestion();
+
 function fourthQuestionResponse() {
   if (questionFour === null) {
     alert('YOU BROKE IT!');
@@ -160,6 +179,7 @@ function fourthQuestionResponse() {
     alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
   }
 }
+
 fourthQuestionResponse();
 
 function questionFourLowercase() {
@@ -168,12 +188,10 @@ function questionFourLowercase() {
     console.log('Answer to Question 4: ', questionFour);
   }
 }
+
 questionFourLowercase();
 
-
-
-
-// Question 5
+// Question 5: Can I play Bohemian Rhapsody on the ukulele?
 
 var questionFive;
 function fifthQuestion() {
@@ -181,6 +199,7 @@ function fifthQuestion() {
     questionFive = prompt('Can I play bohemian rhapsody on the ukulele?');
   }
 }
+
 fifthQuestion();
 
 function fifthQuestionResponse() {
@@ -196,6 +215,7 @@ function fifthQuestionResponse() {
     alert('Sorry, you don\'t know me as well as you thought. Better luck on the next one.');
   }
 }
+
 fifthQuestionResponse();
 
 function questionFiveLowercase() {
@@ -204,10 +224,10 @@ function questionFiveLowercase() {
     console.log('Answer to Question 5: ', questionFive);
   }
 }
+
 questionFiveLowercase();
 
-
-// Question 6
+// Question 6: How many schools have I attended since high school?
 
 var questionSix;
 function sixthQuestion() {
@@ -215,7 +235,9 @@ function sixthQuestion() {
     questionSix = parseInt( prompt('How many different schools have I attended since high school? (Please enter an integer, rather than spelling the number)') );
   }
 }
+
 sixthQuestion();
+
 var guessesRemaining = 4;
 
 function sixthQuestionResponse() {
@@ -243,9 +265,10 @@ function sixthQuestionResponse() {
     }
   }
 }
+
 sixthQuestionResponse();
 
-//Question 7
+//Question 7: Can you guess a country I have visited?
 
 var myCountriesVisited = ['england', 'saudi arabia', 'kenya', 'mexico', 'canada', 'france', 'netherlands', 'egypt', 'jordan'];
 
@@ -261,7 +284,7 @@ var countryGuess;
 
 function seventhQuestionResponse() {
   while (guessesRemainingTwo > 0) {
-    countryGuess = prompt('Can you guess a country that I have visited?').toLowerCase();
+    countryGuess = prompt('Can you guess a country I have visited?').toLowerCase();
     guessesRemainingTwo--;
 
     for (var i = 0; i < myCountriesVisited.length; i++) {
@@ -283,6 +306,7 @@ function seventhQuestionResponse() {
     }
   }
 }
+
 seventhQuestionResponse();
 
 function numberCorrectResponse() {
@@ -303,4 +327,5 @@ function numberCorrectResponse() {
     console.log(userName + ' is a genius! PERFECT SCORE!!!');
   }
 }
+
 numberCorrectResponse();
